@@ -2,6 +2,10 @@
   "name": "blogapp",
   "version": "0.0.0",
   "main": "js/main.js",
+  "dependencies": {
+    "angular-markdown": "latest",
+    "jsonrpc-ng": "git://github.com/arunjitsingh/bower-jsonrpc-ng"
+  },
   "ignore": [
     "**/.*",
     "node_modules",

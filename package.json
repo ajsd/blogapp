@@ -1,0 +1,22 @@
+{
+  "name": "blogapp",
+  "version": "0.0.0",
+  "description": "Blog application for [goblogfe](https://github.com/ajsd/goblogfe).",
+  "main": "index.html",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-usemin": "~0.1.12"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ajsd/blogapp.git"
+  },
+  "author": "arunjit",
+  "license": "MIT",
+  "gitHead": "8dc146823820a0357c066a77168dfe1a59de8697",
+  "readmeFilename": "README.md"
+}

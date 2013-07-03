@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blog</title>
+</head>
+<body ng-app="main">
+  <div ng-view></div>
+
+  <!-- AngularJS templates -->
+  <script type="text/ng-template" id="entries">
+    <markdown extensions="github,google-prettify" ng-repeat="entry in ctrl.entries">
+      {{entry.md}}
+    </markdown>
+    <div ng-show="ctrl.error" ng-bind="ctrl.error"></div>
+  </script>
+
+  <!-- build:js min.js -->
+  <script src="components/angular/angular.min.js"></script>
+  <script src="components/showdown/compressed/showdown.js"></script>
+  <script src="components/showdown/compressed/extensions/github.js"></script>
+  <script src="components/showdown/compressed/extensions/google-prettify.js"></script>
+  <script src="components/angular-markdown/angular.markdown.js"></script>
+  <script src="components/jsonrpc-ng/jsonrpc.min.js"></script>
+  <script src="js/main.js"></script>
+  <!-- endbuild -->
+</body>
+</html>
