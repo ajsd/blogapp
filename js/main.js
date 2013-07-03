@@ -13,7 +13,7 @@ app.config([
 
 app.service('blogService', ['jsonrpc', function(jsonrpc) {
   var service = jsonrpc.newService('blog');
-  this.search = service.newMethod('Search');
+  this.search = service.createMethod('Search');
 }]);
 
 app.controller('EntriesCtrl', [

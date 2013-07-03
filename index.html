@@ -2,23 +2,26 @@
 <html>
 <head>
   <title>Blog</title>
+  <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body ng-app="main">
+  <header>
+    <h1>Blog</h1>
+    <nav>
+      <a href="#/new">New</a>
+    </nav>
+  </header>
   <div ng-view></div>
 
   <!-- AngularJS templates -->
   <script type="text/ng-template" id="entries">
-    <markdown extensions="github,google-prettify" ng-repeat="entry in ctrl.entries">
-      {{entry.md}}
-    </markdown>
+    <markdown ng-repeat="entry in ctrl.entries" ng-model="entry.md"></markdown>
     <div ng-show="ctrl.error" ng-bind="ctrl.error"></div>
   </script>
 
   <!-- build:js min.js -->
   <script src="components/angular/angular.min.js"></script>
   <script src="components/showdown/compressed/showdown.js"></script>
-  <script src="components/showdown/compressed/extensions/github.js"></script>
-  <script src="components/showdown/compressed/extensions/google-prettify.js"></script>
   <script src="components/angular-markdown/angular.markdown.js"></script>
   <script src="components/jsonrpc-ng/jsonrpc.min.js"></script>
   <script src="js/main.js"></script>
